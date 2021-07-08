@@ -75,48 +75,48 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                Padding(
-                padding: EdgeInsets.all(1.0),
-                child:Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                    Image(
-                      image: NetworkImage(userData[index].picture),
-                      width: 150.0,
-                      height: 100.0,
-                      ),
                     Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child:Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                      Text("${userData[index].name} ",
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w700,
-                        ),
+                      padding: EdgeInsets.all(1.0),
+                      child:Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Image(
+                              image: NetworkImage(userData[index].picture),
+                              width: 150.0,
+                              height: 100.0,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child:Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("${userData[index].name} ",
+                                    style: TextStyle(
+                                      fontSize: 30.0,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
+                                    child: Text(" ${userData[index].description}",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ]
                       ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
-                        child: Text(" ${userData[index].description}",
-                          style: TextStyle(
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                     ),
-                  ]
+                    Text("${userData[index].id.toString()} ",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
                 ),
-                ),
-                Text("${userData[index].id.toString()} ",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
-                ),
-            ],
-              ),
               ),
           );
         }
